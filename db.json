@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "name": "Vova",
+      "phone": "89617550590",
+      "dateStart": "2018-09-01",
+      "dateEnd": "2018-09-10",
+      "text": "Book \"Lord of the Rings\"",
+      "id": 1
+    },
+    {
+      "name": "Vova",
+      "phone": "89617550588",
+      "dateStart": "1111-11-11",
+      "dateEnd": "2222-11-11",
+      "text": "Money $300",
+      "id": 2
+    },
+    {
+      "name": "Ksusha",
+      "phone": "987",
+      "dateStart": "10.09.2018",
+      "dateEnd": "20.09.2018",
+      "text": "Flash card",
+      "id": 3
+    }
+  ]
+}

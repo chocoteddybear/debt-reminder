@@ -1,0 +1,290 @@
+@charset "UTF-8";
+
+body {
+  background: #edf0f1;
+  /* padding: 80px 0 0 0; */
+  margin: 0;
+}
+
+body,
+input,
+button {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  padding-left: 8px;
+  padding-right: 8px;
+  box-sizing: border-box;
+}
+
+.col-1 {
+  flex-basis: 8.3333%;
+}
+.col-2 {
+  flex-basis: 16.6666%;
+}
+.col-3 {
+  flex-basis: 24.9999%;
+}
+.col-4 {
+  flex-basis: 33.3333%;
+}
+.col-5 {
+  flex-basis: 41.6665%;
+}
+.col-6 {
+  flex-basis: 49.9998%;
+}
+.col-7 {
+  flex-basis: 58.3331%;
+}
+.col-8 {
+  flex-basis: 66.6664%;
+}
+.col-9 {
+  flex-basis: 74.9997%;
+}
+.col-10 {
+  flex-basis: 83.3333%;
+}
+.col-11 {
+  flex-basis: 91.6663%;
+}
+.col-12 {
+  flex-basis: 100%;
+}
+
+/*///////////////////////////////*/
+/* App component style */
+/*///////////////////////////////*/
+
+.header-flexblock {
+  display: flex;
+}
+
+.header-flexblock h1 {
+  text-align: center;
+}
+
+.item-list {
+  width: 100%;
+  box-sizing: border-box;
+  list-style: none;
+  padding: 18px;
+  margin: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+/* Form style */
+
+header {
+  width: 100%;
+  z-index: 5;
+  padding: 15px;
+  background: #ff005b;
+  box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+header h1 {
+  text-align: center;
+}
+
+header input {
+  height: 50px;
+  flex-grow: 1;
+  color: #000;
+  font-size: 15px;
+  font-weight: 400;
+  text-indent: 18px;
+  background: rgba(255, 255, 255, 1);
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 10px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+header input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 1);
+}
+
+header input:-moz-placeholder {
+  color: rgba(0, 0, 0, 1);
+}
+
+header input::-moz-placeholder {
+  color: rgba(0, 0, 0, 1);
+}
+
+header input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 1);
+}
+
+input[type="date"] {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  text-indent: 8px;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+header button {
+  min-width: 50px;
+  height: 50px;
+  margin: 10px;
+  background: #fff;
+  border-radius: 5px;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+header button:hover {
+  opacity: 0.8;
+}
+
+header button:disabled {
+  opacity: 0.5;
+}
+
+header button img {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (max-width: 991px) {
+  header {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  header input {
+    width: 100%;
+    flex-grow: 1;
+  }
+}
+
+/*///////////////////////////////*/
+/* Product component style */
+/*///////////////////////////////*/
+
+.item {
+  width: 100%;
+  min-height: 50px;
+  font-size: 14px;
+  background: #fff;
+  font-weight: 500;
+  color: #444;
+  line-height: 20px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.1);
+  outline: none;
+  margin: 0 0 10px 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+.item :last-of-type {
+  margin: 0;
+}
+
+.item a {
+  width: 100%;
+}
+
+.unputData {
+  width: 100%;
+  padding: 15px;
+}
+
+button.delete {
+  min-width: 50px;
+  min-height: 50px;
+  background: #ff005b;
+  opacity: 1;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+button.delete:hover {
+  background: #f46464;
+  opacity: 0.8;
+}
+
+img.icon {
+  width: 25px;
+  height: 25px;
+}
