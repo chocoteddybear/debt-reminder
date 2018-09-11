@@ -1,6 +1,7 @@
 "use strict";
 
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   devServer: {
@@ -37,5 +38,10 @@ module.exports = {
         use: ["url-loader"]
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "src/index.html"
+    })
+  ]
 };
