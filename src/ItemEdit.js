@@ -6,7 +6,8 @@ import backArrow from "./svg/back_arrow.svg";
 import doneIcon from "./svg/done_icon.svg";
 import doneIconChecked from "./svg/done_icon_checked.svg";
 
-const path = process.env.PORT || 8080;
+const path =
+  "https://my-json-server.typicode.com/chocoteddybear/debt-reminder/users";
 
 class ItemEdit extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class ItemEdit extends Component {
 
   componentDidMount() {
     const { match } = this.props;
-    return fetch(`${path}/users/${match.params.uid}`)
+    return fetch(`${path}/${match.params.uid}`)
       .then(res => res.json())
       .then(list => {
         console.log(list);
@@ -47,7 +48,7 @@ class ItemEdit extends Component {
         "Content-Type": "application/json"
       })
     };
-    return fetch(`${path}/users/${match.params.uid}`, options)
+    return fetch(`${path}/${match.params.uid}`, options)
       .then(response => response.json())
       .catch(error => console.error(`Error: ${error}`));
   };

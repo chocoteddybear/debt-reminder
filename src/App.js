@@ -7,7 +7,8 @@ import removeIcon from "./svg/remove_icon.svg";
 
 // HTTP Requests
 
-const path = process.env.PORT || 8080;
+const path =
+  "https://my-json-server.typicode.com/chocoteddybear/debt-reminder/users";
 
 const addItem = item => {
   const options = {
@@ -17,7 +18,7 @@ const addItem = item => {
       "Content-Type": "application/json"
     })
   };
-  return fetch(`${path}/users`, options)
+  return fetch(path, options)
     .then(response => response.json())
     .catch(error => console.error(`Error: ${error}`));
 };
@@ -26,7 +27,7 @@ const removeItem = item => {
   const options = {
     method: "DELETE"
   };
-  return fetch(`${path}/users/${item}`, options);
+  return fetch(`${path}/${item}`, options);
 };
 
 // Component App
@@ -47,7 +48,7 @@ class App extends Component {
   // Take items from db.json to state
 
   componentDidMount() {
-    return fetch(`${path}/users`)
+    return fetch(path)
       .then(res => res.json())
       .then(list => {
         this.setState({
