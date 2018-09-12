@@ -4,9 +4,9 @@
   "description": "Xsolla summer school",
   "private": true,
   "scripts": {
-    "production": "webpack --mode=production",
-    "development": "webpack-dev-server --mode=development",
-    "start": "node server.js",
+    "production": "webpack --mode production",
+    "development": "webpack-dev-server --mode development --open",
+    "dev": "node server.js",
     "heroku-postbuild": "webpack -p"
   },
   "repository": {
