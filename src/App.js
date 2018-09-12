@@ -17,7 +17,7 @@ const addItem = item => {
       "Content-Type": "application/json"
     })
   };
-  return fetch(path, options)
+  return fetch(`${path}/users`, options)
     .then(response => response.json())
     .catch(error => console.error(`Error: ${error}`));
 };
@@ -26,7 +26,7 @@ const removeItem = item => {
   const options = {
     method: "DELETE"
   };
-  return fetch(`${path}/${item}`, options);
+  return fetch(`${path}/users/${item}`, options);
 };
 
 // Component App
@@ -47,7 +47,7 @@ class App extends Component {
   // Take items from db.json to state
 
   componentDidMount() {
-    return fetch(path)
+    return fetch(`${path}/users`)
       .then(res => res.json())
       .then(list => {
         this.setState({

@@ -23,7 +23,7 @@ class ItemEdit extends Component {
 
   componentDidMount() {
     const { match } = this.props;
-    return fetch(`${path}/${match.params.uid}`)
+    return fetch(`${path}/users/${match.params.uid}`)
       .then(res => res.json())
       .then(list => {
         console.log(list);
@@ -47,7 +47,7 @@ class ItemEdit extends Component {
         "Content-Type": "application/json"
       })
     };
-    return fetch(`${path}/${match.params.uid}`, options)
+    return fetch(`${path}/users/${match.params.uid}`, options)
       .then(response => response.json())
       .catch(error => console.error(`Error: ${error}`));
   };
