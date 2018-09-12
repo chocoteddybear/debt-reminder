@@ -6,8 +6,7 @@ import backArrow from "./svg/back_arrow.svg";
 import doneIcon from "./svg/done_icon.svg";
 import doneIconChecked from "./svg/done_icon_checked.svg";
 
-const path =
-  "https://my-json-server.typicode.com/chocoteddybear/debt-reminder/users";
+const path = process.env.PORT || 8080;
 
 class ItemEdit extends Component {
   constructor(props) {

@@ -7,8 +7,7 @@ import removeIcon from "./svg/remove_icon.svg";
 
 // HTTP Requests
 
-const path =
-  "https://my-json-server.typicode.com/chocoteddybear/debt-reminder/users";
+const path = process.env.PORT || 8080;
 
 const addItem = item => {
   const options = {
