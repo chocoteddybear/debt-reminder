@@ -7,8 +7,8 @@ import removeIcon from "./svg/remove_icon.svg";
 
 // HTTP Requests
 
-const path =
-  "https://my-json-server.typicode.com/chocoteddybear/debt-reminder/users";
+const path = "http://localhost:3000/users";
+// use this URL for Heroku online app: https://my-json-server.typicode.com/chocoteddybear/debt-reminder/users
 
 const addItem = item => {
   const options = {
